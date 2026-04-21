@@ -17,32 +17,35 @@ public class Dormitory
 	private HashMap < String , Student > rooms ;
 	// Write the constructor for the Dormitory class:
 	// (For full credit the constructor should use only one parameter)
-
+	public Dormitory(name){
+		this.name = name;
+		HashMap rooms = new HashMap<>();
+	}
 
 	//Now, write out the remaining methods:
 	public String getName () {
-		return ""; //FIXME
+		return name; //FIXME
 	}
 
 	/**
 	 * Returns the amount of rooms that are currently occupied.
 	 */
 	public int getOccupiedRooms () {
-		return 0;//FIXME
+		return rooms.size();//FIXME
 	}
 	
 	/**
 	* Sets the given room number to be occupied by the given Student.
 	*/
 	public void addStudent ( String roomNo , Student s) {
-		//FIXME
+		rooms.set(roomNo,s);
 	}
 	
 	/**
 	* Returns true if the given room contains a Student, false otherwise
 	*/
 	public boolean isOccupied ( String roomNo ) {
-		return false; //FIXME
+		return rooms.get(roomNo)!=null;
 	}
 	
 	/**
@@ -51,15 +54,22 @@ public class Dormitory
 	* @return A List containing the student ID numbers of all students in this dorm
 	*/
 	public LinkedList < Integer > getStudentIds () {
-		return null; //FIXME
+		LinkedList studentList = new LinkedList<>();
+		for (Student s : rooms.values()){
+			studentList.add(s.getID());
+		}
+		return studentList; //FIXME
 	}
 	
 	public static void main(String[] args) {
 		
 		//Create an instance of the Dormitory class and store it in a variable called dorm.
-		
+		HashMap dorm = new Dormitory("#1");
 		//Create an instance of Student and add it to the dorm. You can choose which room to add it to.
-		
+		Student student1 = new Student(10347);
+		dorm.set("Room# 101",student1);
 		//Write code to determine if a student with the id of 123456 is in your dorm using the appropriate methods.
+		dormList = dorm.getStudentIds();
+		
 	}
 }
