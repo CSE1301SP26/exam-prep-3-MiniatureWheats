@@ -7,26 +7,34 @@ package exam.codewriting.q3;
 	duration (in seconds)
  */
 public class Song {
-	
+
 	// Define your instance variables here
-	
+	private String name;
+	private String artist;
+	private int duration;
+
 	// Write the constructor for the Song class
-	
-	public String getName () {
-		return ""; //FIXME
+	public Song(String name, String artist, int duration) {
+		this.name = name;
+		this.artist = artist;
+		this.duration = duration;
 	}
-	
-	public String toString () {
-		return ""; //FIXME
+
+	public String getName() {
+		return name; // FIXME
 	}
-	
+
+	public String toString() {
+		return name + " by " + artist + ", " + duration + " seconds"; // FIXME
+	}
+
 	/**
-	* When two songs are mashed up, a new Song should be created and returned.
-	* The name and artist of the new song should contain both names and both
-	* artists from the original songs, and the duration should be the average
-	* of the durations of the original songs.
-	*/
-	public Song mashUp ( Song other ) {
-		return null; //FIXME
+	 * When two songs are mashed up, a new Song should be created and returned.
+	 * The name and artist of the new song should contain both names and both
+	 * artists from the original songs, and the duration should be the average
+	 * of the durations of the original songs.
+	 */
+	public Song mashUp(Song other) {
+		return null; // FIXME
 	}
 }
