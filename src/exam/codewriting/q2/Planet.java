@@ -9,33 +9,33 @@ public class Planet {
 
 	// Define your instance variables here
 	private String name;
-	private double mass;
+	private int mass;
+
 	// Write the constructor for the Planet class
-	public Planet(String name, double mass){
-		this.name=name;
-		this.mass=mass;
+	public Planet(String name, int mass) {
+		this.name = name;
+		this.mass = mass;
 	}
 
-	public String getName () {
-		return name; //FIXME
+	public String getName() {
+		return name; // FIXME
 	}
-	
-	public int getMass () {
-		return mass; //FIXME
+
+	public int getMass() {
+		return mass; // FIXME
 	}
-	
-	public String toString () {
-		return name + ", " + mass; 
-	} 
-	
+
+	public String toString() {
+		return name + ", " + mass;
+	}
+
 	/**
-	* When two planets collide, a new Planet should be created and returned.
-	* The mass of the new planet should be the total mass of the two planets
-	* involved in the collision, and it should be named after both planets.
-	*/
-	public Planet collide ( Planet other ) {
-		return new Planet(name + "-" + other.name, mass + other.mass); //FIXME
+	 * When two planets collide, a new Planet should be created and returned.
+	 * The mass of the new planet should be the total mass of the two planets
+	 * involved in the collision, and it should be named after both planets.
+	 */
+	public Planet collide(Planet other) {
+		return new Planet(name + "-" + other.name, mass + other.mass); // FIXME
 	}
-	
-	
+
 }
